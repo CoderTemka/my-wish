@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>One More Step 🎄</title>
+
+  <!-- Same birthday font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body onclick="playMusic()">
+
+  <!-- 🎵 Background Music -->
+  <audio id="music" loop>
+    <source src="audio/1.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="card">
+    <h1>🎄 Last Birthday...</h1>
+
+    <p>
+      You will find just a piece of paper with a QR code.<br><br>
+      Go to your son’s room.<br>
+      Open the drawer.<br>
+      Read the paper carefully.
+    </p>
+
+    <button onclick="goNext()">I found it ➡</button>
+  </div>
+
+  <script>
+    function playMusic() {
+      const music = document.getElementById("music");
+      music.play();
+    }
+
+    function goNext() {
+      window.location.href = "quiz.html";
+    }
+  </script>
+
+</body>
+</html>
